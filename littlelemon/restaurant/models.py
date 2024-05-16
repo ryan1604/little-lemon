@@ -7,7 +7,7 @@ class Menu(models.Model):
     inventory = models.IntegerField()
 
     def __str__(self):
-        return self.title
+        return f"{self.title}: {self.price}"
     
 class Booking(models.Model):
     name = models.CharField(max_length=255)
@@ -15,4 +15,4 @@ class Booking(models.Model):
     booking_date = models.DateTimeField()
 
     def __str__(self):
-        return f"{self.name} - {self.booking_date}"
+        return f"{self.name}: {self.booking_date}"
